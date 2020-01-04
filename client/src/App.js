@@ -14,7 +14,17 @@ import * as actions from "./actions/index";
 class App extends Component {
   onToggleForm = () => {
     //gọi lên props onToggleForm đã được dispatch ở mapDispatchToProps
-    this.props.onToggleForm(this.state);
+    var { itemEditing } = this.props;
+    if (itemEditing && itemEditing.id !== "") {
+      this.props.onOpenForm();
+    } else {
+      this.props.onToggleForm();
+    }
+    this.props.onClearTask({
+      id: "",
+      name: "",
+      status: false
+    });
   };
   render() {
     const { isDisplayForm } = this.props;
@@ -79,6 +89,12 @@ const mapDispatchToProps = (dispatch, props) => {
     //dispatch action
     onToggleForm: () => {
       dispatch(actions.toggleForm());
+    },
+    onOpenForm: () => {
+      dispatch(actions.openForm());
+    },
+    onClearTask: (task) => {
+      dispatch(actions.editTask(task));
     }
   };
 };

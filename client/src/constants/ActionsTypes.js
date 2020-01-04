@@ -7,3 +7,8 @@ export const OPEN_FORM = "OPEN_FORM";
 export const UPDATE_STATUS = "UPDATE_STATUS";
 export const DELETE_TASK = "DELETE_TASK";
 export const EDIT_TASK = "EDIT_TASK";
+//filter trực tiếp trên table
+export const FILTER_TALE = "FILTER_TALE";
+export const SEARCH = "SEARCH";
+//sắp xếp
+export const SORT = "SORT";

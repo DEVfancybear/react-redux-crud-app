@@ -7,7 +7,7 @@ class Control extends Component {
   render() {
     return (
       <Row>
-        <Search />
+        <Search/>
         <Col xs={6} sm={6} md={6} lg={6}>
           <Sort />
         </Col>

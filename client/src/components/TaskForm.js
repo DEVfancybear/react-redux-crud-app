@@ -55,6 +55,7 @@ class TaskForm extends Component {
       status: false
     });
   };
+  //xử lí từ form
   onSubmitForm = e => {
     e.preventDefault();
     // console.log(this.state);

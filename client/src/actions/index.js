@@ -8,7 +8,10 @@ import {
   CLOSE_FORM,
   UPDATE_STATUS,
   DELETE_TASK,
-  EDIT_TASK
+  EDIT_TASK,
+  FILTER_TALE,
+  SEARCH,
+  SORT
 } from "../constants/ActionsTypes";
 export const listAll = () => {
   return {
@@ -56,5 +59,26 @@ export const editTask = task => {
   return {
     type: EDIT_TASK,
     task
+  };
+};
+//truyền vào 1 obj filter cả filterName lẫn filterStatus
+export const filterTask = filter => {
+  return {
+    type: FILTER_TALE,
+    filter
+  };
+};
+//tham số keyword là 1 kiểu string
+export const searchTask = keyword => {
+  return {
+    type: SEARCH,
+    keyword
+  };
+};
+//tham số là 1 obj gồm các thuộc tính(tương tự filter)
+export const sortTask = sort => {
+  return {
+    type: SORT,
+    sort
   };
 };
