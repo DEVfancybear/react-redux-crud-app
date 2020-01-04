@@ -72,7 +72,7 @@ class TaskLists extends Component {
       });
     }
     const element = tasks.map((task, index) => {
-      return <TaskItem key={index} task={task} />;
+      return <TaskItem key={task.id} index={index + 1} task={task} />;
     });
     return (
       <Row>
