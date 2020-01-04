@@ -79,6 +79,7 @@ class TaskForm extends Component {
             {!this.state.id ? "Thêm Công Việc" : "Cập Nhật Công Việc"}
             <span>
               <FontAwesomeIcon
+               className="ml-3"
                 onClick={this.onExitForm}
                 icon={faTimes}
                 style={{ color: "green" }}
